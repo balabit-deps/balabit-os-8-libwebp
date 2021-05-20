@@ -1,3 +1,49 @@
+libwebp (0.6.1-2ubuntu0.20.04.1) focal-security; urgency=medium
+
+  * SECURITY UPDATE: heap-based buffer overflow in GetLE16() and GetLE24()
+    - debian/patches/CVE-2018-25009.patch: check data_size in
+      src/mux/muxread.c.
+    - CVE-2018-25009
+    - CVE-2018-25012
+  * SECURITY UPDATE: heap-based buffer overflow in ApplyFilter()
+    - debian/patches/CVE-2018-25010.patch: limit the filter size in
+      src/utils/quant_levels_dec_utils.c.
+    - CVE-2018-25010
+  * SECURITY UPDATE: heap-based buffer overflow in PutLE16()
+    - debian/patches/CVE-2018-25011.patch: limit number of image chunks in
+      src/mux/muxread.c.
+    - CVE-2018-25011
+  * SECURITY UPDATE: heap-based buffer overflow in ShiftBytes() and in
+    ReadSymbol()
+    - debian/patches/CVE-2018-25013_4.patch: wait for all threads to be
+      done in DecodeRemaining in src/dec/idec_dec.c.
+    - CVE-2018-25013
+    - CVE-2018-25014
+  * SECURITY UPDATE: heap-based buffer overflow in WebPDecode*Into functions
+    - debian/patches/CVE-2020-36328.patch: fix buffer size check in
+      src/dec/buffer_dec.c.
+    - CVE-2020-36328
+  * SECURITY UPDATE: use-after-free in EmitFancyRGB()
+    - debian/patches/CVE-2020-36329.patch: fix thread race
+      heap-use-after-free in src/dec/idec_dec.c.
+    - CVE-2020-36329
+  * SECURITY UPDATE: heap-based buffer overflow in ChunkVerifyAndAssign()
+    - debian/patches/CVE-2020-36330.patch: fix riff size checks in
+      src/mux/muxread.c.
+    - CVE-2020-36330
+  * SECURITY UPDATE: heap-based buffer overflow in ChunkAssignData()
+    - debian/patches/CVE-2020-36331.patch: validate chunk_size in
+      src/mux/muxi.h, src/mux/muxread.c.
+    - CVE-2020-36331
+  * SECURITY UPDATE: extreme memory allocation when reading a file
+    - debian/patches/CVE-2020-36332-pre1.patch: limit memory allocation
+      when reading invalid Huffman codes in src/dec/vp8l_dec.c.
+    - debian/patches/CVE-2020-36332.patch: better handling of bogus Huffman
+      codes in src/dec/vp8l_dec.c.
+    - CVE-2020-36332
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 20 May 2021 07:52:26 -0400
+
 libwebp (0.6.1-2) unstable; urgency=medium
 
   * Fix lintian warning on manpage

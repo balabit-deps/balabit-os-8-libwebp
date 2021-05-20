@@ -1,3 +1,13 @@
 soname_override
 big-endian
 fix-lintian-warning
+CVE-2018-25009.patch
+CVE-2018-25010.patch
+CVE-2018-25011.patch
+CVE-2018-25013_4.patch
+CVE-2020-36328.patch
+CVE-2020-36329.patch
+CVE-2020-36330.patch
+CVE-2020-36331.patch
+CVE-2020-36332-pre1.patch
+CVE-2020-36332.patch
