@@ -1,3 +1,12 @@
+libwebp (0.6.1-2ubuntu0.20.04.2) focal-security; urgency=medium
+
+  * SECURITY UPDATE: crash and possible code execution via double free
+    - debian/patches/CVE-2023-1999.patch: clear result->bw on error in
+      src/enc/alpha_enc.c.
+    - CVE-2023-1999
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 15 May 2023 14:14:09 -0400
+
 libwebp (0.6.1-2ubuntu0.20.04.1) focal-security; urgency=medium
 
   * SECURITY UPDATE: heap-based buffer overflow in GetLE16() and GetLE24()
