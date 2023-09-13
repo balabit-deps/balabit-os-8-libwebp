@@ -1,3 +1,16 @@
+libwebp (0.6.1-2ubuntu0.20.04.3) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Heap buffer overflow in BuildHuffmanTable
+    - debian/patches/CVE-2023-4863-pre1.patch: speedups for unused Huffman
+      groups in src/dec/vp8l_dec.c, src/utils/huffman_utils.c,
+      src/utils/huffman_utils.h.
+    - debian/patches/CVE-2023-4863.patch: fix OOB write in
+      BuildHuffmanTable in src/dec/vp8l_dec.c, src/dec/vp8li_dec.h,
+      src/utils/huffman_utils.c, src/utils/huffman_utils.h.
+    - CVE-2023-4863
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 13 Sep 2023 14:06:44 -0400
+
 libwebp (0.6.1-2ubuntu0.20.04.2) focal-security; urgency=medium
 
   * SECURITY UPDATE: crash and possible code execution via double free
